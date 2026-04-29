@@ -1,0 +1,17 @@
+{ config, lib, ... }:
+{
+  config.eiros.users.vwestberg.mangowc.settings = {
+    enable_hotarea = 0;
+    ov_tab_mode = 1;
+    idleinhibit_ignore_visible = 1;
+    edge_scroller_pointer_focus = 0;
+
+    tagrule = [
+      "id:1,layout_name:scroller"
+    ];
+
+    env = [
+      "GTK_THEME,Adwaita:dark"
+    ];
+  };
+}

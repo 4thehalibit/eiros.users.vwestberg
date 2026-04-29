@@ -1,17 +1,21 @@
 {
-  description = "Eiros user configuration - vwestberg";
-
-  outputs = { nixpkgs, ... }: {
-    nixosModules.default = { ... }: {
-      eiros.users.vwestberg = {
-        extra_groups = [ "wheel" "audio" "video" ];
-        initial_password = "West11berg1!";
-        dms = {
-          settings = {
-            use24HourClock = false;
-          };
-        };
+  description = "Reusable NixOS user configurations";
+  outputs =
+    {
+      nixpkgs,
+      self,
+    }@inputs:
+    let
+      import_modules = import ./resources/nix/import_modules.nix;
+    in
+    {
+      nixosModules.default = {
+        imports = import_modules ./users;
       };
+    };
+  inputs = {
+    nixpkgs = {
+      url = "github:nixos/nixpkgs/master";
     };
   };
 }
