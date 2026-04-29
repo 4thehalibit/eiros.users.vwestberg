@@ -25,9 +25,12 @@ Before installing, you need to set your password in `users/vwestberg/user.nix`.
 
 2. Open `users/vwestberg/user.nix` and replace `REPLACE_WITH_HASH` with the output.
 
-3. **Do not commit `user.nix` back to the repo** — keep your hash local.
-
-> `user.nix` is listed in `.gitignore` to prevent accidentally committing credentials.
+3. Commit and push the change — the hash is a one-way value, safe to store in a public repo.
+   ```bash
+   git add users/vwestberg/user.nix
+   git commit -m "Set password hash"
+   git push
+   ```
 
 ## Using This as a Template
 
