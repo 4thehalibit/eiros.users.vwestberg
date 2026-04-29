@@ -4,6 +4,8 @@
     eiros.users.vwestberg = {
       dms.settings.use24HourClock = false;
     };
-    users.users.vwestberg.initialHashedPassword = "$y$j9T$79GVabVVh7mD42/nnC31D0$2RDn2GWP1ekiWHysYwQHLYQOPYczvBvLhNi15ZQWI4/";
+    # Generate your password hash with: mkpasswd -m yescrypt
+    # Then replace the value below with your hash.
+    users.users.vwestberg.initialHashedPassword = "REPLACE_WITH_HASH";
   };
 }
