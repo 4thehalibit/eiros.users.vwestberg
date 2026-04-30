@@ -78,7 +78,7 @@
     media_play_pause   = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Home";    mangowc_command = "spawn_shell"; command_arguments = "playerctl play-pause"; };
     media_next         = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Prior";   mangowc_command = "spawn_shell"; command_arguments = "playerctl next"; };
     media_vol_down     = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Delete";  mangowc_command = "spawn_shell"; command_arguments = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"; };
-    media_vol_up       = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "End";     mangowc_command = "spawn_shell"; command_arguments = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"; };
-    media_mute         = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Next";    mangowc_command = "spawn_shell"; command_arguments = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; };
+    media_mute         = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "End";     mangowc_command = "spawn_shell"; command_arguments = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; };
+    media_vol_up       = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Next";    mangowc_command = "spawn_shell"; command_arguments = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"; };
   };
 }
