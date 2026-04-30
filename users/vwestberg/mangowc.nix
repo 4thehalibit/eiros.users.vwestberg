@@ -30,6 +30,10 @@
       "name:^DP-7$,width:3840,height:2160,refresh:60,x:0,y:0,scale:1.5"
       "name:^eDP-1$,width:2560,height:1600,refresh:165,x:2560,y:220,scale:1.6"
     ];
+
+    "exec-once" = [
+      "sh -c 'sleep 15 && wlr-randr --output DP-7 --off && sleep 2 && wlr-randr --output DP-7 --on'"
+    ];
   };
 
   config.eiros.users.vwestberg.mangowc.keybinds = {
