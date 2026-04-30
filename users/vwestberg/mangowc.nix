@@ -13,6 +13,9 @@
     env = [
       "GTK_THEME,Adwaita:dark"
     ];
+
+    xkb_rules_layout = "us";
+    xkb_rules_model = "pc104";
   };
 
   config.eiros.users.vwestberg.mangowc.keybinds = {
