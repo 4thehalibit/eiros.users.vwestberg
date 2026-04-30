@@ -51,10 +51,12 @@
     swap_window_right         = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "Right"; mangowc_command = "exchange_client"; command_arguments = "right"; };
     swap_window_up            = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "Up";    mangowc_command = "exchange_client"; command_arguments = "up"; };
     swap_window_down          = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "Down";  mangowc_command = "exchange_client"; command_arguments = "down"; };
-    move_window_monitor_left  = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Left";  mangowc_command = "tagmon";          command_arguments = "left,1"; };
-    move_window_monitor_right = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Right"; mangowc_command = "tagmon";          command_arguments = "right,1"; };
-    move_window_monitor_up    = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Up";    mangowc_command = "tagmon";          command_arguments = "up,1"; };
-    move_window_monitor_down  = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Down";  mangowc_command = "tagmon";          command_arguments = "down,1"; };
+    move_window_monitor_left  = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Left";  mangowc_command = "tagmon";   command_arguments = "left,1"; };
+    move_window_monitor_right = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Right"; mangowc_command = "tagmon";   command_arguments = "right,1"; };
+    move_window_monitor_up    = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Up";    mangowc_command = "tagmon";   command_arguments = "up,1"; };
+    move_window_monitor_down  = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Down";  mangowc_command = "tagmon";   command_arguments = "down,1"; };
+    focus_monitor_left        = { modifier_keys = [ "SUPER" "ALT" ];  flag_modifiers = [ "s" ]; key_symbol = "Left";  mangowc_command = "focusmon"; command_arguments = "left"; };
+    focus_monitor_right       = { modifier_keys = [ "SUPER" "ALT" ];  flag_modifiers = [ "s" ]; key_symbol = "Right"; mangowc_command = "focusmon"; command_arguments = "right"; };
 
     # Match Omarchy app shortcuts
     window_fullscreen  = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "f";    mangowc_command = "togglemaximizescreen"; command_arguments = null; };
