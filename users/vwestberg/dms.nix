@@ -1,5 +1,7 @@
 { ... }:
 {
+  eiros.users.vwestberg.dms.clobber = false;
+
   eiros.system.user_defaults.dms = {
     theme = {
       matugen_scheme = "scheme-rainbow";
