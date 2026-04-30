@@ -72,5 +72,13 @@
     webapp_chatgpt     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "a";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://chatgpt.com"; };
     webapp_email       = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "e";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://outlook.office.com"; };
     webapp_youtube     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "y";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://youtube.com"; };
+
+    # Media controls on Insert/Home/PageUp/Delete/End/PageDown cluster
+    media_previous     = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Insert";  mangowc_command = "spawn_shell"; command_arguments = "playerctl previous"; };
+    media_play_pause   = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Home";    mangowc_command = "spawn_shell"; command_arguments = "playerctl play-pause"; };
+    media_next         = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Prior";   mangowc_command = "spawn_shell"; command_arguments = "playerctl next"; };
+    media_vol_down     = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Delete";  mangowc_command = "spawn_shell"; command_arguments = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"; };
+    media_vol_up       = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "End";     mangowc_command = "spawn_shell"; command_arguments = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"; };
+    media_mute         = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Next";    mangowc_command = "spawn_shell"; command_arguments = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; };
   };
 }
