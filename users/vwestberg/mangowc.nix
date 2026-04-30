@@ -8,6 +8,14 @@
 
     tagrule = [
       "id:1,layout_name:scroller"
+      "id:2,layout_name:scroller"
+      "id:3,layout_name:scroller"
+      "id:4,layout_name:scroller"
+      "id:5,layout_name:scroller"
+      "id:6,layout_name:scroller"
+      "id:7,layout_name:scroller"
+      "id:8,layout_name:scroller"
+      "id:9,layout_name:scroller"
     ];
 
     env = [
@@ -16,6 +24,11 @@
 
     xkb_rules_layout = "us";
     xkb_rules_model = "pc104";
+
+    monitorrule = [
+      "model:VX3211-4K,width:3840,height:2160,refresh:60,x:0,y:0,scale:1.5"
+      "name:^eDP-1$,width:2560,height:1600,refresh:165,x:2560,y:220,scale:1.6"
+    ];
   };
 
   config.eiros.users.vwestberg.mangowc.keybinds = {
