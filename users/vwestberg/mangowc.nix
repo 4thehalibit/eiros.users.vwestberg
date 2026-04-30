@@ -67,7 +67,7 @@
     launch_vivaldi     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "v";    mangowc_command = "spawn";                command_arguments = "vivaldi"; };
     launch_teams       = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "t";    mangowc_command = "spawn";                command_arguments = "teams-for-linux"; };
     launch_editor      = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "n";    mangowc_command = "spawn";                command_arguments = "code"; };
-    launch_spotify     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "m";    mangowc_command = "spawn";                command_arguments = "spotify"; };
+    launch_cider       = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "m";    mangowc_command = "spawn";                command_arguments = "cider-2"; };
     suspend_system     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "s";    mangowc_command = "spawn_shell";          command_arguments = "systemctl suspend"; };
     webapp_chatgpt     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "a";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://chatgpt.com"; };
     webapp_email       = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "e";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://outlook.office.com"; };
