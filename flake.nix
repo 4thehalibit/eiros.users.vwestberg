@@ -3,6 +3,7 @@
   outputs =
     {
       nixpkgs,
+      ninjaone,
       self,
     }@inputs:
     let
@@ -10,12 +11,15 @@
     in
     {
       nixosModules.default = {
-        imports = import_modules ./users;
+        imports = (import_modules ./users) ++ [ ninjaone.nixosModules.default ];
       };
     };
   inputs = {
     nixpkgs = {
       url = "github:nixos/nixpkgs/master";
+    };
+    ninjaone = {
+      url = "github:4thehalibit/ninjaone-nixos";
     };
   };
 }
