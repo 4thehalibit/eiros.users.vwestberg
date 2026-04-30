@@ -27,12 +27,11 @@
 
     monitorrule = [
       "model:VX3211-4K,width:3840,height:2160,refresh:60,x:0,y:0,scale:1.5"
-      "name:^DP-7$,width:3840,height:2160,refresh:60,x:0,y:0,scale:1.5"
       "name:^eDP-1$,width:2560,height:1600,refresh:165,x:2560,y:220,scale:1.6"
     ];
 
     "exec-once" = [
-      "sh -c 'sleep 15 && wlr-randr --output DP-7 --off && sleep 2 && wlr-randr --output DP-7 --on'"
+      "sh -c 'sleep 15 && output=$(wlr-randr | grep VX3211-4K | awk \"{print \\$1}\") && [ -n \"$output\" ] && wlr-randr --output \"$output\" --off && sleep 2 && wlr-randr --output \"$output\" --on'"
     ];
   };
 
