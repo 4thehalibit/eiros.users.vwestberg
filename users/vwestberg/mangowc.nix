@@ -26,6 +26,20 @@
     night_mode                = { modifier_keys = [ "SUPER" "CTRL" ]; flag_modifiers = [ "s" ]; key_symbol = "n";      mangowc_command = "spawn_shell";          command_arguments = "dms ipc call night toggle"; };
     wallpaper_carousel_toggle = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "b";      mangowc_command = "spawn_shell";          command_arguments = "dms ipc wallpaperCarousel toggle"; };
 
+    # Arrow keys instead of hjkl
+    switch_focus_left         = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "Left";  mangowc_command = "focusdir";        command_arguments = "left"; };
+    switch_focus_right        = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "Right"; mangowc_command = "focusdir";        command_arguments = "right"; };
+    switch_focus_up           = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "Up";    mangowc_command = "focusdir";        command_arguments = "up"; };
+    switch_focus_down         = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "Down";  mangowc_command = "focusdir";        command_arguments = "down"; };
+    swap_window_left          = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "Left";  mangowc_command = "exchange_client"; command_arguments = "left"; };
+    swap_window_right         = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "Right"; mangowc_command = "exchange_client"; command_arguments = "right"; };
+    swap_window_up            = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "Up";    mangowc_command = "exchange_client"; command_arguments = "up"; };
+    swap_window_down          = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "Down";  mangowc_command = "exchange_client"; command_arguments = "down"; };
+    move_window_monitor_left  = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Left";  mangowc_command = "tagmon";          command_arguments = "left,1"; };
+    move_window_monitor_right = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Right"; mangowc_command = "tagmon";          command_arguments = "right,1"; };
+    move_window_monitor_up    = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Up";    mangowc_command = "tagmon";          command_arguments = "up,1"; };
+    move_window_monitor_down  = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Down";  mangowc_command = "tagmon";          command_arguments = "down,1"; };
+
     # Match Omarchy app shortcuts
     window_fullscreen  = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "f";    mangowc_command = "togglemaximizescreen"; command_arguments = null; };
     launch_vivaldi     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "v";    mangowc_command = "spawn";                command_arguments = "vivaldi"; };
