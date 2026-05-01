@@ -1,0 +1,62 @@
+{
+  "nodes": {
+    "ninjaone": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1777666370,
+        "narHash": "sha256-GPx8RluVS6RpIWqZbNpI3PnTo4Rv9X+0waUun216dyw=",
+        "owner": "4thehalibit",
+        "repo": "ninjaone-nixos",
+        "rev": "053432f6b0bf5f1070966a14a0b0b1f12fdade06",
+        "type": "github"
+      },
+      "original": {
+        "owner": "4thehalibit",
+        "repo": "ninjaone-nixos",
+        "type": "github"
+      }
+    },
+    "nixpkgs": {
+      "locked": {
+        "lastModified": 1777664919,
+        "narHash": "sha256-bVkUEPMpfWfBV0qXkWbdVtfgM+e9CF/z61IufwvmQXc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "0ce6ccb30fce33e82295f7462d3894f791230dfd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
+        "lastModified": 1777664919,
+        "narHash": "sha256-bVkUEPMpfWfBV0qXkWbdVtfgM+e9CF/z61IufwvmQXc=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "0ce6ccb30fce33e82295f7462d3894f791230dfd",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "ninjaone": "ninjaone",
+        "nixpkgs": "nixpkgs_2"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
