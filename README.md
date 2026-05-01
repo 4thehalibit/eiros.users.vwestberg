@@ -1,6 +1,6 @@
 # eiros.users.personal
 
-Personal NixOS user configuration for vwestberg. Part of the [Eiros](https://github.com/lcleveland/eiros) system configuration.
+Personal NixOS user configuration. Part of the [Eiros](https://github.com/lcleveland/eiros) system configuration.
 
 ## Structure
 
