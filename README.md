@@ -1,6 +1,6 @@
-# eiros.users.vwestberg
+# eiros.users.personal
 
-Personal NixOS user configuration for vwestberg. Part of the [eiros](https://github.com/4thehalibit) system configuration.
+Personal NixOS user configuration for vwestberg. Part of the [Eiros](https://github.com/lcleveland/eiros) system configuration.
 
 ## Structure
 
@@ -10,7 +10,7 @@ users/
     ├── user.nix              # User account settings (password set here)
     ├── groups.nix            # Group memberships
     ├── trusted_user.nix      # Nix trusted user settings
-    ├── mangowc.nix           # MangoWC overlay config
+    ├── mangowc.nix           # MangoWC compositor config
     └── applications/         # Per-app NixOS module configs
 ```
 
