@@ -26,12 +26,17 @@
     xkb_rules_model = "pc104";
 
     monitorrule = [
+      # Home: single 4K monitor
       "model:VX3211-4K,width:3840,height:2160,refresh:60,x:0,y:0,scale:1.5"
-      "name:^eDP-1$,width:2560,height:1600,refresh:165,x:2560,y:220,scale:1.6"
+      # Work: two stacked ViewSonics (DP-10 on top rotated, DP-9 below)
+      "name:^DP-10$,width:1920,height:1080,refresh:60,x:0,y:0,scale:1,rr:2"
+      "name:^DP-9$,width:1920,height:1080,refresh:60,x:0,y:1080,scale:1"
+      # Laptop: default work position (x=1920); exec-once moves to x=2560 at home
+      "name:^eDP-1$,width:2560,height:1600,refresh:165,x:1920,y:580,scale:1.6"
     ];
 
     "exec-once" = [
-      "sh -c 'sleep 15 && output=$(wlr-randr | grep VX3211-4K | awk \"{print \\$1}\") && [ -n \"$output\" ] && wlr-randr --output \"$output\" --off && sleep 2 && wlr-randr --output \"$output\" --on'"
+      "sh -c 'sleep 15 && output=$(wlr-randr | grep VX3211-4K | awk \"{print \\$1}\") && [ -n \"$output\" ] && wlr-randr --output \"$output\" --off && sleep 2 && wlr-randr --output \"$output\" --on && sleep 1 && wlr-randr --output eDP-1 --pos 2560,220'"
     ];
   };
 
@@ -61,6 +66,8 @@
     move_window_monitor_down  = { modifier_keys = [ "CTRL" "SHIFT" ]; flag_modifiers = [ "s" ]; key_symbol = "Down";  mangowc_command = "tagmon";   command_arguments = "down,1"; };
     focus_monitor_left        = { modifier_keys = [ "SUPER" "ALT" ];  flag_modifiers = [ "s" ]; key_symbol = "Left";  mangowc_command = "focusmon"; command_arguments = "left"; };
     focus_monitor_right       = { modifier_keys = [ "SUPER" "ALT" ];  flag_modifiers = [ "s" ]; key_symbol = "Right"; mangowc_command = "focusmon"; command_arguments = "right"; };
+    focus_monitor_up          = { modifier_keys = [ "SUPER" "ALT" ];  flag_modifiers = [ "s" ]; key_symbol = "Up";    mangowc_command = "focusmon"; command_arguments = "up"; };
+    focus_monitor_down        = { modifier_keys = [ "SUPER" "ALT" ];  flag_modifiers = [ "s" ]; key_symbol = "Down";  mangowc_command = "focusmon"; command_arguments = "down"; };
 
     # Match Omarchy app shortcuts
     window_fullscreen  = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "f";    mangowc_command = "togglemaximizescreen"; command_arguments = null; };
@@ -69,6 +76,8 @@
     launch_editor      = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "n";    mangowc_command = "spawn";                command_arguments = "code"; };
     launch_cider       = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "m";    mangowc_command = "spawn";                command_arguments = "cider-2"; };
     suspend_system     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "s";    mangowc_command = "spawn_shell";          command_arguments = "systemctl suspend"; };
+    monitor_home       = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "h";    mangowc_command = "spawn_shell";          command_arguments = "wlr-randr --output eDP-1 --pos 2560,220"; };
+    monitor_office     = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "o";    mangowc_command = "spawn_shell";          command_arguments = "wlr-randr --output eDP-1 --pos 1920,580"; };
     webapp_chatgpt     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "a";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://chatgpt.com"; };
     webapp_email       = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "e";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://outlook.office.com"; };
     webapp_youtube     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "y";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://youtube.com"; };
