@@ -47,7 +47,7 @@
     launch_file_browser       = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "f";      mangowc_command = "spawn";                command_arguments = "nautilus"; };
     launch_browser            = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "Return"; mangowc_command = "spawn";                command_arguments = "vivaldi"; };
     quit_mangowc              = { modifier_keys = [ "SUPER" "CTRL" ]; flag_modifiers = [ "s" ]; key_symbol = "q";      mangowc_command = "quit";                 command_arguments = null; };
-    screenshot                = { modifier_keys = [ ];                 flag_modifiers = [ "s" ]; key_symbol = "Print";  mangowc_command = "spawn_shell";          command_arguments = "dms screenshot --no-file"; };
+    screenshot                = { modifier_keys = [ ];                 flag_modifiers = [ "s" ]; key_symbol = "Print";  mangowc_command = "spawn_shell";          command_arguments = "dms screenshot -d ~/Pictures/Screenshots"; };
     night_mode                = { modifier_keys = [ "SUPER" "CTRL" ]; flag_modifiers = [ "s" ]; key_symbol = "n";      mangowc_command = "spawn_shell";          command_arguments = "dms ipc call night toggle"; };
     wallpaper_carousel_toggle = { modifier_keys = [ "SUPER" ];        flag_modifiers = [ "s" ]; key_symbol = "b";      mangowc_command = "spawn_shell";          command_arguments = "dms ipc wallpaperCarousel toggle"; };
 
