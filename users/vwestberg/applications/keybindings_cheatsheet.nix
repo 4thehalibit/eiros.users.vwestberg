@@ -9,4 +9,11 @@
       hash = "sha256-kK2LSdzNne/M3iBn7p3h5ZytqVoZLVyOczpokzFa+ew=";
     };
   };
+
+  eiros.system.user_defaults.dms.misc.external_plugin_settings = {
+    keybindingCheatSheet = {
+      compositor = "mangowc";
+      columns = "2";
+    };
+  };
 }
