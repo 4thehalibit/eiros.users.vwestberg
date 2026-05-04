@@ -9,7 +9,7 @@
     claude = "cd ~/claude && command claude";
   };
 
-  programs.zsh.initContent = ''
+  programs.zsh.interactiveShellInit = ''
     deploy() { cd ~/eiros-config && git add -A && git commit -m "''${1:-update config}" && git push && rebuild; }
   '';
 }
