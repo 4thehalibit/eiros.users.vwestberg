@@ -6,6 +6,10 @@
     idleinhibit_ignore_visible = 1;
     edge_scroller_pointer_focus = 0;
 
+    windowrule = [
+      "isfloating:1,width:960,height:720,appid:keybinds-popup"
+    ];
+
     tagrule = [
       "id:1,layout_name:scroller"
       "id:2,layout_name:scroller"
@@ -83,7 +87,7 @@
     webapp_youtube     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "y";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://youtube.com"; };
 
     # Keybinding cheat sheet
-    keybinds_cheatsheet = { modifier_keys = [ "SUPER" ]; flag_modifiers = [ "s" ]; key_symbol = "F1"; mangowc_command = "spawn_shell"; command_arguments = "dms ipc keybinds toggle mangowc"; };
+    keybinds_cheatsheet = { modifier_keys = [ "SUPER" ]; flag_modifiers = [ "s" ]; key_symbol = "F1"; mangowc_command = "spawn"; command_arguments = "ghostty --app-id=keybinds-popup -e keybinds-popup"; };
 
     # Media controls on Insert/Home/PageUp/Delete/End/PageDown cluster
     media_previous     = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Insert";  mangowc_command = "spawn_shell"; command_arguments = "playerctl previous"; };
