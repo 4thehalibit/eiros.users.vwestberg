@@ -32,6 +32,7 @@ if res.stdout.strip():
         if '=' in line:
             name, _, cmd = line.partition('=')
             cmd = cmd.strip(\"'\")
+            if len(cmd) > 55: cmd = cmd[:52] + '...'
             print('    ' + KEY + name.ljust(28) + R + cmd)
     print()
       " | ${pkgs.fzf}/bin/fzf --ansi --no-sort --layout=reverse \
