@@ -19,8 +19,8 @@ for cat in cats:
     items = binds[cat]
     print('  ' + CAT + B + cat.upper() + R)
     for b in items:
-        key = b.get('key', '')
-        desc = b.get('desc') or b.get('action', '')
+        key = b.get('key') or str()
+        desc = b.get('desc') or b.get('action') or str()
         print('    ' + KEY + key.ljust(28) + R + desc)
     print()
       " | ${pkgs.fzf}/bin/fzf --ansi --no-sort --layout=reverse \
