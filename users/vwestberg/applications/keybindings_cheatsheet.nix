@@ -25,7 +25,7 @@ for cat in cats:
     print()
       " | ${pkgs.fzf}/bin/fzf --ansi --no-sort --layout=reverse \
             --header="  Keybindings  (type to search, Esc to close)" \
-            --header-first --no-info --bind="esc:abort,enter:abort"
+            --header-first --no-info --no-preview --bind="esc:abort,enter:abort"
     '')
   ];
 }
