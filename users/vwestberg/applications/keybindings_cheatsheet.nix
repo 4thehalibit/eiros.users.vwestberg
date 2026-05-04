@@ -14,6 +14,7 @@
     keybindingCheatSheet = {
       compositor = "mangowc";
       columns = "2";
+      fontScale = 140;
     };
   };
 }
