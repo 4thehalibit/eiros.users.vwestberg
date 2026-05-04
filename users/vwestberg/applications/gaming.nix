@@ -14,7 +14,13 @@
   # nftables flag that patches LXC_USE_NFT=true in the network script.
   nixpkgs.overlays = [
     (final: prev: {
-      waydroid = prev.waydroid.override { nftables = true; };
+      waydroid = prev.waydroid.overrideAttrs (old: {
+        postFixup = (old.postFixup or "") + ''
+          substituteInPlace $out/lib/waydroid/data/scripts/.waydroid-net.sh-wrapped \
+            --replace 'IPTABLES_BIN="$(command -v iptables-legacy)"' 'IPTABLES_BIN=""' \
+            --replace 'IP6TABLES_BIN="$(command -v ip6tables-legacy)"' 'IP6TABLES_BIN=""'
+        '';
+      });
     })
   ];
 }
