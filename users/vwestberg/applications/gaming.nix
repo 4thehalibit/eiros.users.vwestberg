@@ -7,12 +7,9 @@
     ];
   };
 
-  virtualisation.waydroid = {
-    enable = true;
-    package = pkgs.waydroid-nftables;
-  };
+  virtualisation.docker.enable = true;
 
   environment.systemPackages = [
-    pkgs.waydroid-helper
+    pkgs.winboat
   ];
 }
