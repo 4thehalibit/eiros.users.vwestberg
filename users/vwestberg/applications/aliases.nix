@@ -10,6 +10,6 @@
   };
 
   programs.zsh.interactiveShellInit = ''
-    deploy() { cd ~/eiros-config && git add -A && git commit -m "''${1:-update config}" && git push && rebuild; }
+    deploy() { cd ~/eiros-config && git add -A && (git diff --cached --quiet || git commit -m "''${1:-update config}") && git push && rebuild; }
   '';
 }
