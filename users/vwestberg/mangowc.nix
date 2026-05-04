@@ -83,7 +83,7 @@
     webapp_youtube     = { modifier_keys = [ "SUPER" "SHIFT" ];flag_modifiers = [ "s" ]; key_symbol = "y";    mangowc_command = "spawn";                command_arguments = "vivaldi --app=https://youtube.com"; };
 
     # Keybinding cheat sheet
-    keybinds_cheatsheet = { modifier_keys = [ "SUPER" ]; flag_modifiers = [ "s" ]; key_symbol = "F1"; mangowc_command = "spawn_shell"; command_arguments = "dms ipc keybinds toggle"; };
+    keybinds_cheatsheet = { modifier_keys = [ "SUPER" ]; flag_modifiers = [ "s" ]; key_symbol = "F1"; mangowc_command = "spawn_shell"; command_arguments = "dms ipc keybinds toggle keybindingCheatSheet"; };
 
     # Media controls on Insert/Home/PageUp/Delete/End/PageDown cluster
     media_previous     = { modifier_keys = [ ];flag_modifiers = [ "s" ]; key_symbol = "Insert";  mangowc_command = "spawn_shell"; command_arguments = "playerctl previous"; };
