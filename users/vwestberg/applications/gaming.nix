@@ -11,5 +11,6 @@
 
   environment.systemPackages = [
     pkgs.winboat
+    pkgs.freerdp
   ];
 }
