@@ -1,17 +1,11 @@
-{ ... }:
+{ config, ... }:
+let
+  overrides =
+    if builtins.pathExists ../../dms-overrides.json
+    then builtins.fromJSON (builtins.readFile ../../dms-overrides.json)
+    else { };
+in
 {
-  eiros.system.user_defaults.dms = {
-    theme = {
-      matugen_scheme = "scheme-rainbow";
-    };
-
-    appearance = {
-      widget_color_mode = "colorful";
-      bar_elevation.enable = false;
-    };
-
-    app_theming = {
-      terminals_always_dark = false;
-    };
-  };
+  eiros.users.vwestberg.dms.settings =
+    config.eiros.system.user_defaults.dms._settings // overrides;
 }

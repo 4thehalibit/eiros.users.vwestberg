@@ -1,0 +1,11 @@
+{
+  "matugenScheme": "scheme-rainbow",
+  "widgetColorMode": "colorful",
+  "cornerRadius": 12,
+  "animationSpeed": 1,
+  "barElevationEnabled": false,
+  "terminalsAlwaysDark": false,
+  "gtkThemingEnabled": false,
+  "qtThemingEnabled": false,
+  "showGpuTemp": false
+}
