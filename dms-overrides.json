@@ -7,5 +7,7 @@
   "terminalsAlwaysDark": false,
   "gtkThemingEnabled": false,
   "qtThemingEnabled": false,
-  "showGpuTemp": false
+  "showGpuTemp": false,
+  "currentThemeName": "dynamic",
+  "useFahrenheit": true
 }
