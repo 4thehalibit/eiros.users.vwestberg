@@ -18,21 +18,7 @@ let
     exec ${pythonEnv}/bin/python3 ${./dms_settings.py} "$@"
   '';
 
-  dms-settings = pkgs.symlinkJoin {
-    name = "dms-settings";
-    paths = [
-      script
-      (pkgs.makeDesktopItem {
-        name = "dms-settings";
-        desktopName = "DMS Settings";
-        comment = "Configure DankMaterialShell";
-        exec = "${script}/bin/dms-settings";
-        icon = "preferences-system";
-        categories = [ "Settings" ];
-        terminal = false;
-      })
-    ];
-  };
+  dms-settings = script;
 in
 {
   environment.systemPackages = [ dms-settings ];
