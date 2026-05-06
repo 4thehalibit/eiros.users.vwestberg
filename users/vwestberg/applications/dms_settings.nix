@@ -12,18 +12,20 @@ let
     at-spi2-core
   ]));
 
+  script = pkgs.writeShellScriptBin "dms-settings" ''
+    export GI_TYPELIB_PATH="${giPath}''${GI_TYPELIB_PATH:+:$GI_TYPELIB_PATH}"
+    exec ${pythonEnv}/bin/python3 ${./dms_settings.py} "$@"
+  '';
+
   dms-settings = pkgs.symlinkJoin {
     name = "dms-settings";
     paths = [
-      (pkgs.writeShellScriptBin "dms-settings" ''
-        export GI_TYPELIB_PATH="${giPath}''${GI_TYPELIB_PATH:+:$GI_TYPELIB_PATH}"
-        exec ${pythonEnv}/bin/python3 ${./dms_settings.py} "$@"
-      '')
+      script
       (pkgs.makeDesktopItem {
         name = "dms-settings";
         desktopName = "DMS Settings";
         comment = "Configure DankMaterialShell";
-        exec = "dms-settings";
+        exec = "${script}/bin/dms-settings";
         icon = "preferences-system";
         categories = [ "Settings" ];
         terminal = false;
