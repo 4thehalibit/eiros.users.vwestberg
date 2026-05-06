@@ -9,6 +9,7 @@ let
     libadwaita
     pango
     gdk-pixbuf
+    graphene
     at-spi2-core
   ]));
 
